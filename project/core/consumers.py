@@ -22,6 +22,9 @@ class MyWebsocketConsumer(WebsocketConsumer):
     data = json.loads(text_data)
     print(data['msg'])
     message = data['msg']
+    group = Group.objects.get(name = self.group_name)
+    chat = Chat(content = data['msg'], group = group)
+    chat.save()
     async_to_sync(self.channel_layer.group_send)(
       self.group_name,
       {

@@ -25,6 +25,9 @@
         
         <div id="message-box" style="max-height: 420px;overflow-y: scroll; overflow-x: hidden;color:#52cd60;font-weight:bold" class="p-2 d-flex flex-column">
             {% comment %} <span style="color:#52cd60;" class="px-5 py-2">Hii</span> {% endcomment %}
+            {% for chat in chats %}
+                <p>{{chat.content}}</p>
+            {% endfor %}
 
         </div>
          
