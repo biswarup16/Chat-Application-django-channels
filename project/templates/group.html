@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anonymous Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container mx-auto d-flex flex-column justify-content-center" style="height:80vh">
+        <h3>Create Room</h3>
+        <div class="d-flex justify-content-between p-0">
+            <input type="text" id="create-room" class="form-control shadow-lg p-3" style="width:80%" name="" id="">
+            <button id="create-btn" class="btn px-5 py-0 shadow-lg" style="background:#52cd60;font-weight:bold;color:white">Send</button>
+        </div>
+
+        <h3 class="mt-5" >Join Room</h3>
+        <div class="d-flex justify-content-between p-0">
+            <input type="text" id="join-room" class="form-control shadow-lg p-3" style="width:80%" name="" id="">
+            <button id="join-btn" class="btn px-5 py-0 shadow-lg" style="background:#52cd60;font-weight:bold;color:white">Send</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+        const createBtn = document.getElementById('create-btn')
+        createBtn.addEventListener('click',()=>{
+            const create = document.getElementById('create-room').value
+            window.location.href = `/${create}`
+        })
+
+        const joinBtn = document.getElementById('join-btn')
+        joinBtn.addEventListener('click',()=>{
+            const create = document.getElementById('join-room').value
+            window.location.href = `/${create}`
+        })
+    </script>
+  </body>
+</html>
